@@ -54,6 +54,7 @@ app.whenReady().then(() => {
   win.maximize()
   win.setMenuBarVisibility(false)
   win.loadURL('https://www.youtube.com')
+  win.addExtension('C:\Users\Administrator\Documents\uBlock0.chromium')
   win.webContents.on('did-finish-load', function() {
     fs.readFile(__dirname+'/app/blue.css', "utf-8", function(error, data) {
       if (!error){
